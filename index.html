@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNITE 1.0 | Innovate Today. Lead Tomorrow.</title>
+    <meta name="description"
+        content="IGNITE 1.0 - A 3-day hackathon by Jeppiaar Institute of Technology. Feb 11-13, 2026. Explore tracks in Web Dev, AR/VR, Game Dev, IoT and more!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">IGNITE</span>
+                <span class="logo-version">1.0</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#tracks" class="nav-link">Tracks</a></li>
+                <li><a href="#details" class="nav-link">Details</a></li>
+                <li><a href="#coordinators" class="nav-link">Team</a></li>
+                <li><a href="#register" class="nav-link nav-cta">Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="glow-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="institution-badge">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Jeppiaar_Institute_of_Technology_logo.png/220px-Jeppiaar_Institute_of_Technology_logo.png"
+                    alt="JIT Logo" class="jit-logo" onerror="this.style.display='none'">
+                <span>Jeppiaar Institute of Technology presents</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-main">IGNITE</span>
+                <span class="title-version">1.0</span>
+            </h1>
+            <p class="hero-tagline">"Innovate Today. Lead Tomorrow."</p>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div class="countdown-label">Event Starts In</div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-unit">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-unit">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-unit">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-unit">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiAlzk7lQ5S0LFBZz3-UK3o9irL4InoL7iE5Ri2xOjzYAyKw/viewform"
+                target="_blank" class="hero-cta">
+                <span>Register Now</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> About The Event
+            </h2>
+            <div class="about-content">
+                <div class="about-text glass-card">
+                    <p class="about-intro">
+                        <strong>IGNITE 1.0</strong> is a premier 3-day hackathon bringing together the brightest minds
+                        to innovate, create, and push the boundaries of technology.
+                    </p>
+                    <p>
+                        Organized by Jeppiaar Institute of Technology, this event challenges participants
+                        to develop cutting-edge solutions across multiple technology domains. Whether you're
+                        passionate about web development, immersive AR/VR experiences, or the Internet of Things,
+                        IGNITE 1.0 is your platform to shine.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Days</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">7</span>
+                            <span class="stat-label">Tracks</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100+</span>
+                            <span class="stat-label">Participants</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section class="section tracks-section" id="tracks">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> Hackathon Tracks
+            </h2>
+            <p class="section-subtitle">Choose your domain. Build your future.</p>
+
+            <div class="tracks-grid">
+                <div class="track-card glass-card" data-track="web">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Fullstack Web Development</h3>
+                    <p>Build complete web applications from frontend to backend</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="genai">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z" />
+                            <circle cx="9" cy="14" r="1" />
+                            <circle cx="15" cy="14" r="1" />
+                        </svg>
+                    </div>
+                    <h3>Generative AI (Gen AI)</h3>
+                    <p>Build AI-powered applications with LLMs and neural networks</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="uiux">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <path d="M21 15l-5-5L5 21" />
+                        </svg>
+                    </div>
+                    <h3>UI & UX Designing</h3>
+                    <p>Create stunning user experiences and interfaces</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="app">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <line x1="12" y1="18" x2="12" y2="18" />
+                        </svg>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Develop mobile applications for iOS and Android</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="ar">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Augmented Reality</h3>
+                    <p>Blend digital content with the real world</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="vr">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+                            <circle cx="9" cy="12" r="2" />
+                            <circle cx="15" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Virtual Reality</h3>
+                    <p>Create immersive virtual experiences</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="game">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6 12h4M8 10v4M15 13h.01M18 11h.01" />
+                            <rect x="2" y="6" width="20" height="12" rx="4" />
+                        </svg>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>Design and develop captivating games</p>
+                </div>
+
+                <div class="track-card glass-card" data-track="iot">
+                    <div class="track-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 2v2M12 20v2M22 12h-2M4 12H2M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M19.07 19.07l-1.41-1.41M6.34 6.34L4.93 4.93" />
+                        </svg>
+                    </div>
+                    <h3>Internet of Things</h3>
+                    <p>Connect devices and build smart solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="section details-section" id="details">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> Event Details
+            </h2>
+
+            <div class="details-grid">
+                <div class="detail-card glass-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <h3>Date</h3>
+                    <p class="detail-value">February 11, 12 & 13</p>
+                    <span class="detail-sub">2026</span>
+                </div>
+
+                <div class="detail-card glass-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12,6 12,12 16,14" />
+                        </svg>
+                    </div>
+                    <h3>Time</h3>
+                    <p class="detail-value">10:00 AM - 3:00 PM</p>
+                    <span class="detail-sub">Daily</span>
+                </div>
+
+                <div class="detail-card glass-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Venue</h3>
+                    <p class="detail-value">AR & VR Lab</p>
+                    <span class="detail-sub">1st Floor, JIT Campus</span>
+                </div>
+
+
+                <div class="detail-card glass-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v6.5l3-3M12 8.5l-3-3" />
+                            <rect x="3" y="10" width="18" height="11" rx="2" />
+                            <path d="M8 15h.01M12 15h.01M16 15h.01" />
+                        </svg>
+                    </div>
+                    <h3>Registration Fee</h3>
+                    <p class="detail-value">₹100</p>
+                    <span class="detail-sub">Per Team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section class="section organizers-section" id="organizers">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> Conducted By
+            </h2>
+
+            <div class="organizers-grid">
+                <div class="organizer-card glass-card">
+                    <div class="organizer-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 5V3M12 21v-2" />
+                        </svg>
+                    </div>
+                    <h3>AR & VR Research and Development Center</h3>
+                    <p>Jeppiaar Institute of Technology</p>
+                </div>
+
+                <div class="organizer-card glass-card">
+                    <div class="organizer-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Quantum Phoenixer</h3>
+                    <p>Associated Partner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perks Section -->
+    <section class="section perks-section" id="perks">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> What You'll Get
+            </h2>
+
+            <div class="perks-grid">
+                <div class="perk-card glass-card">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="5" width="16" height="16" rx="2" />
+                            <path d="M16 2v4M8 2v4M4 10h16" />
+                            <path d="M9 16l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Certificate</h3>
+                    <p>Hard Copy Certificate for all participants</p>
+                </div>
+
+                <div class="perk-card glass-card">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 7V5a4 4 0 00-8 0v2" />
+                            <circle cx="12" cy="14" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Internship</h3>
+                    <p>Internship opportunities for top performers</p>
+                </div>
+
+                <div class="perk-card glass-card featured">
+                    <div class="perk-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="6" />
+                            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                        </svg>
+                    </div>
+                    <h3>Cash Prize</h3>
+                    <p>Exciting cash prizes for winners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators Section -->
+    <section class="section coordinators-section" id="coordinators">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">//</span> Event Coordinators
+            </h2>
+
+            <div class="coordinators-wrapper">
+                <div class="coordinator-group">
+                    <h3 class="group-title">Staff Coordinators</h3>
+                    <div class="coordinator-cards">
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">MI</div>
+                            <p class="coordinator-name">Mrs. Indhumathi</p>
+                            <span class="coordinator-role">Faculty Coordinator</span>
+                        </div>
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">SN</div>
+                            <p class="coordinator-name">Mr. Saleem Nawaz</p>
+                            <span class="coordinator-role">Faculty Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coordinator-group">
+                    <h3 class="group-title">Student Coordinators</h3>
+                    <div class="coordinator-cards">
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">KV</div>
+                            <p class="coordinator-name">K. Varun</p>
+                            <span class="coordinator-role">Student Lead</span>
+                        </div>
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">PU</div>
+                            <p class="coordinator-name">P. Udhaya Kumar</p>
+                            <span class="coordinator-role">Student Coordinator</span>
+                        </div>
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">VM</div>
+                            <p class="coordinator-name">V. Monica</p>
+                            <span class="coordinator-role">Student Coordinator</span>
+                        </div>
+                        <div class="coordinator-card glass-card">
+                            <div class="coordinator-avatar">VB</div>
+                            <p class="coordinator-name">V. Bhavya</p>
+                            <span class="coordinator-role">Student Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section class="section register-section" id="register">
+        <div class="container">
+            <div class="register-content glass-card">
+                <h2 class="register-title">Ready to Ignite Your Potential?</h2>
+                <p class="register-text">
+                    Join hundreds of innovators, developers, and creators at IGNITE 1.0.
+                    Register now to secure your spot!
+                </p>
+                <div class="register-fee">
+                    <span class="fee-label">Registration Fee:</span>
+                    <span class="fee-amount">₹100</span>
+                    <span class="fee-note">per team</span>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiAlzk7lQ5S0LFBZz3-UK3o9irL4InoL7iE5Ri2xOjzYAyKw/viewform"
+                    target="_blank" class="register-btn">
+                    <span>Register Now</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <p class="register-note">Limited seats available. First come, first served.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">IGNITE</span>
+                        <span class="logo-version">1.0</span>
+                    </div>
+                    <p>"Innovate Today. Lead Tomorrow."</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Organized by</h4>
+                    <p>Jeppiaar Institute of Technology</p>
+                    <p>AR & VR R&D Center</p>
+                    <p>TNEA Code: 1140</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+916383488861"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                        </svg> +91 6383488861</a>
+                    <a href="mailto:ignitejit@gmail.com"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M22 6l-10 7L2 6" />
+                        </svg> ignitejit@gmail.com</a>
+                    <a href="https://instagram.com/ignite_jit" target="_blank"><svg viewBox="0 0 24 24" width="16"
+                            height="16" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="18" cy="6" r="1" />
+                        </svg> @ignite_jit</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#tracks">Tracks</a>
+                    <a href="#perks">Perks</a>
+                    <a href="#register">Register</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IGNITE 1.0 | Jeppiaar Institute of Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -779,9 +779,9 @@ img {
 }
 
 .timeline-marker.final {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border-color: var(--color-primary-light);
-    box-shadow: 0 0 20px var(--color-primary-glow);
+    background: var(--color-bg-secondary);
+    border: 3px solid var(--color-primary);
+    box-shadow: none;
 }
 
 .phase-number {
@@ -792,6 +792,17 @@ img {
 }
 
 .timeline-marker.final .phase-number {
+    color: var(--color-primary);
+}
+
+.timeline-marker.final:hover,
+.timeline-marker.final:active {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    box-shadow: 0 0 25px var(--color-primary-glow);
+}
+
+.timeline-marker.final:hover .phase-number,
+.timeline-marker.final:active .phase-number {
     color: white;
 }
 
